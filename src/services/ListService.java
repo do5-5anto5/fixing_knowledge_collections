@@ -27,12 +27,12 @@ public class ListService {
 		tasksList.removeAll(tasksToRemove);
 	}
 
-	public int getNumberOfTasks() {
-		return tasksList.size();
+	public void getNumberOfTasks() {
+		System.out.println("Total of tasks is now: " + tasksList.size());
 	}
 
 	public void getTasksDescription() {
-		System.out.println(tasksList);
+		System.out.println("\n" + tasksList.toString());
 	}	
 
 }
