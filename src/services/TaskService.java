@@ -5,11 +5,11 @@ import java.util.List;
 
 import entities.Task;
 
-public class ListService {
+public class TaskService {
 
 	private List<Task> tasksList;
 
-	public ListService() {
+	public TaskService() {
 		this.tasksList = new ArrayList<>();
 	}
 

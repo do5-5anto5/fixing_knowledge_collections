@@ -2,26 +2,26 @@ package application.list;
 
 import java.util.Scanner;
 
-import services.ListService;
+import services.TaskService;
 
-public class ListMain {
+public class TasksClient {
 
 	public static void main(String[] args) {
 
-		ListService service = new ListService();
+		TaskService taskService = new TaskService();
 		System.out.println("Type 3 task descriptions: ");
 
 		try (Scanner input = new Scanner(System.in)) {		
-			addTaskProcess(service, input);
-			removeTaskProcess(service, input);
-			service.getTasksDescription();
+			addTaskProcess(taskService, input);
+			removeTaskProcess(taskService, input);
+			taskService.getTasksDescription();
 		} 
 		catch (RuntimeException e) {
 			e.printStackTrace();
 		}
 	}	
 	
-	private static void addTaskProcess(ListService service, Scanner input) {
+	private static void addTaskProcess(TaskService service, Scanner input) {
 		
 		for (int i = 0; i < 3; i++) {
 			System.out.println("Adding task...");
@@ -33,7 +33,7 @@ public class ListMain {
 		}
 	}
 	
-	private static void removeTaskProcess(ListService service, Scanner input) {
+	private static void removeTaskProcess(TaskService service, Scanner input) {
 		System.out.print("\nEnter task to remove: ");
 		String description = input.next();
 		
