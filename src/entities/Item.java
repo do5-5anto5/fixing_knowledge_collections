@@ -42,10 +42,8 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "Item [ name = " + name + ", price = " + price + ", quantity = " 
-	+ quantity + ", sub total: " +itemTotalPrice() + " ]";
+		return name + ", price = " + String.format("%.2f",price)
+		+ ", quantity = " + quantity 
+		+ ", sub total: " + String.format("%.2f", itemTotalPrice()) ;
 	}
-	
-		
-	
 }
