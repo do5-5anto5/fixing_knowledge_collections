@@ -1,11 +1,14 @@
 package application.list;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 import services.ItemService;
 
 public class ShoppingCart {
 	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
 
 		ItemService itemService = new ItemService();
 
