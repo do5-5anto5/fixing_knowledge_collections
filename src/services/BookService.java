@@ -31,15 +31,16 @@ public class BookService {
 		}
 	}
 
-	public List<Book> researchByTitle(String title) {
-		if (!booksList.isEmpty()) {
-			List<Book> researchByTitle = new ArrayList<>();
-			for (Book book : booksList) {
-				if (book.getTitle().equalsIgnoreCase(title)) {
-					researchByTitle.add(book);
+	public Book researchByTitle(String title) {
+		if (!booksList.isEmpty()) {	
+			Book book = new Book();
+			for (Book b : booksList) {
+				if (b.getTitle().equalsIgnoreCase(title)) {
+					book = b;
+					break;
 				}
 			}
-			return researchByTitle;
+			return book;
 		} else {
 			throw new RuntimeException("Empty List");
 		}

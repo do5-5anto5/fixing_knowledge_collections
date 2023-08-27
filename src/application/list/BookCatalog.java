@@ -24,7 +24,6 @@ public class BookCatalog {
 	    
 	    //test researchByYearRange 
 	    System.out.println(bookService.researchByYearRange(2010, 2022));
-	    System.out.println();
 	    System.out.println(bookService.researchByYearRange(2025, 2030));
 	}
 
