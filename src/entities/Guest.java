@@ -3,11 +3,11 @@ package entities;
 public class Guest {
 
 	private String name;
-	private int ticketCode;
+	private String ticketCode;
 	
 	public Guest() {}
 
-	public Guest(String name, int ticketCode) {
+	public Guest(String name, String ticketCode) {
 		this.name = name;
 		this.ticketCode = ticketCode;
 	}
@@ -20,11 +20,11 @@ public class Guest {
 		this.name = name;
 	}
 
-	public int getTicketCode() {
+	public String getTicketCode() {
 		return ticketCode;
 	}
 
-	public void setTicketCode(int ticketCode) {
+	public void setTicketCode(String ticketCode) {
 		this.ticketCode = ticketCode;
 	}
 
