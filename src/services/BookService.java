@@ -5,7 +5,7 @@ import java.util.List;
 
 import entities.Book;
 
-public class BookService {
+public class BookService{
 
 	private List<Book> booksList;
 
