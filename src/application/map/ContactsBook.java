@@ -33,6 +33,13 @@ public class ContactsBook {
 		}
 	}
 	
+	public void showContacts() {
+		System.out.println("\nAll contacts:\n");
+		for (String key : contactsBook.keySet()) {
+			System.out.println(key + ", " + contactsBook.get(key));
+		}
+	}
+	
 	public static void main (String[] args) {
 		
 		ContactsBook book = new ContactsBook();
@@ -45,6 +52,8 @@ public class ContactsBook {
 		book.addContact("Paula", 4444);
 		
 		book.researchContactByName("Paula");
-		book.removeContact("Jose");		
+		book.removeContact("Jose");	
+		book.showContacts();
+		
 	}
 }
